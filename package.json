@@ -1,6 +1,6 @@
 {
   "name": "haraka-plugin-ioredis",
-  "version": "1.0.7-ioredis",
+  "version": "1.0.7-ioredis.1",
   "description": "Redis plugin for Haraka & other plugins to inherit from",
   "main": "index.js",
   "directories": {
