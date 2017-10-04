@@ -1,4 +1,10 @@
 
+
+# 1.0.7-ioredis - 2017-10-04
+
+- replace node_redis with ioredis
+- use yaml instead of ini (easier to provide nested objects like sentinel settings)
+
 # 1.0.7 - 2017-07-31
 
 - apply config [opts] to pubsub settings #7

@@ -1,9 +1,6 @@
-# haraka-plugin-redis
+# haraka-plugin-ioredis
 
-[![Build Status][ci-img]][ci-url]
-[![Code Climate][clim-img]][clim-url]
-[![Windows Build status][apv-img]][apv-url]
-[![Greenkeeper badge][gk-img]][gk-url]
+> Forked from [haraka-plugin-redis](https://github.com/haraka/haraka-plugin-redis). This fork replaces node_redis with [ioredis](https://www.npmjs.com/package/ioredis). Configuration file uses YAML instead of INI.
 
 Connects to a redis instance. By default it stores a `redis`
 connection handle at `server.notes.redis`. See below to get a custom DB handle
@@ -11,24 +8,24 @@ attached to another database.
 
 ## Config
 
-The `redis.ini` file has the following sections (defaults shown):
+The `redis.yaml` file has the following sections (defaults shown):
 
-### [server]
+### server:
 
-    ; host=127.0.0.1
-    ; port=6379
-    ; db=0
+    # host=127.0.0.1
+    # port=6379
+    # db=0
 
-### [pubsub]
+### pubsub:
 
-    ; host=127.0.0.1
-    ; port=6379
+    # host=127.0.0.1
+    # port=6379
 
 Publish & Subscribe are DB agnostic and thus have no db setting. If host and port and not defined, they default to the same as [server] settings.
 
-### [opts]
+### opts:
 
-    ; see https://www.npmjs.com/package/redis#overloading
+    # see https://www.npmjs.com/package/ioredis#connect-to-redis
 
 
 ## Usage (shared redis)

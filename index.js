@@ -1,7 +1,7 @@
 'use strict';
 /* global server */
 
-const redis  = require('redis');
+const Redis  = require('ioredis');
 
 exports.register = function () {
     const plugin = this;
@@ -19,7 +19,7 @@ exports.register = function () {
 exports.load_redis_ini = function () {
     const plugin = this;
 
-    plugin.redisCfg = plugin.config.get('redis.ini', function () {
+    plugin.redisCfg = plugin.config.get('ioredis.yaml', function () {
         plugin.load_redis_ini();
     });
 
@@ -149,7 +149,7 @@ exports.redis_ping = function (done) {
 exports.get_redis_client = function (opts, next) {
     const plugin = this;
 
-    const client = redis.createClient(opts)
+    const client = new Redis(opts)
         .on('error', function (error) {
             plugin.logerror('Redis error: ' + error.message);
             next();
@@ -187,7 +187,7 @@ exports.redis_subscribe_pattern = function (pattern, next) {
         return next();
     }
 
-    plugin.redis = require('redis').createClient(plugin.redisCfg.pubsub)
+    plugin.redis = new Redis(plugin.redisCfg.pubsub)
         .on('psubscribe', function (pattern2, count) {
             plugin.logdebug(plugin, 'psubscribed to ' + pattern2);
             next();
@@ -206,7 +206,7 @@ exports.redis_subscribe = function (connection, next) {
         return next();
     }
 
-    connection.notes.redis = require('redis').createClient(plugin.redisCfg.pubsub)
+    connection.notes.redis = new Redis(plugin.redisCfg.pubsub)
         .on('psubscribe', function (pattern, count) {
             connection.logdebug(plugin, 'psubscribed to ' + pattern);
             next();

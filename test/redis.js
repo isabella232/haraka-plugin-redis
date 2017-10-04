@@ -38,7 +38,7 @@ exports.redis = {
             retry_strategy: retry,
         },
         function () {
-            test.ok(redis.connected);
+            test.ok(redis.status === 'ready');
             test.done();
         });
     },
@@ -56,9 +56,8 @@ exports.redis = {
         this.plugin.cfg.redis.retry_strategy = retry;
         const client = this.plugin.get_redis_client(this.plugin.cfg.redis, function () {
             test.expect(2);
-            // console.log(client);
-            test.equal(client.connected, true);
-            test.equal(client.selected_db, 2);
+            test.equal(client.status, 'ready');
+            test.equal(client.condition.select, 2);
             test.done();
         });
     }

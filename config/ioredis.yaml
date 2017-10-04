@@ -1,0 +1,13 @@
+---
+server:
+  host: "127.0.0.1"
+  port: "6379"
+#  db: "0"
+
+pubsub:
+  host: "127.0.0.1"
+  port: "6379"
+
+## extra options, applied to both server and pubsub connections
+#opts:
+#  password: "secret"
