@@ -1,6 +1,6 @@
 {
-  "name": "haraka-plugin-redis",
-  "version": "1.0.7",
+  "name": "haraka-plugin-ioredis",
+  "version": "1.0.7-ioredis",
   "description": "Redis plugin for Haraka & other plugins to inherit from",
   "main": "index.js",
   "directories": {
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/haraka/haraka-plugin-redis.git"
+    "url": "git+https://github.com/nodemailer/haraka-plugin-redis.git"
   },
   "keywords": [
     "haraka",
@@ -33,7 +33,7 @@
   "author": "Matt Simerson <matt@tnpi.net>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/haraka/haraka-plugin-redis/issues"
+    "url": "https://github.com/nodemailer/haraka-plugin-redis/issues"
   },
-  "homepage": "https://github.com/haraka/haraka-plugin-redis#readme"
+  "homepage": "https://github.com/nodemailer/haraka-plugin-redis#readme"
 }
