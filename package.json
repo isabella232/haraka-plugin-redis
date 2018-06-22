@@ -1,39 +1,39 @@
 {
-  "name": "haraka-plugin-ioredis",
-  "version": "1.0.7-ioredis.1",
-  "description": "Redis plugin for Haraka & other plugins to inherit from",
-  "main": "index.js",
-  "directories": {
-    "test": "test"
-  },
-  "dependencies": {
-    "ioredis": "^3.1.4"
-  },
-  "devDependencies": {
-    "eslint": "*",
-    "eslint-plugin-haraka": "*",
-    "haraka-test-fixtures": "*",
-    "nodeunit": "*"
-  },
-  "scripts": {
-    "lint": "./node_modules/.bin/eslint *.js test/*.js",
-    "lintfix": "./node_modules/.bin/eslint --fix *.js test/*.js",
-    "test": "./run_tests"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nodemailer/haraka-plugin-redis.git"
-  },
-  "keywords": [
-    "haraka",
-    "mail",
-    "smtp",
-    "redis"
-  ],
-  "author": "Matt Simerson <matt@tnpi.net>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nodemailer/haraka-plugin-redis/issues"
-  },
-  "homepage": "https://github.com/nodemailer/haraka-plugin-redis#readme"
+    "name": "haraka-plugin-ioredis",
+    "version": "1.0.7-ioredis.2",
+    "description": "Redis plugin for Haraka & other plugins to inherit from",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "dependencies": {
+        "ioredis": "^3.2.2"
+    },
+    "devDependencies": {
+        "eslint": "*",
+        "eslint-plugin-haraka": "*",
+        "haraka-test-fixtures": "*",
+        "nodeunit": "*"
+    },
+    "scripts": {
+        "lint": "./node_modules/.bin/eslint *.js test/*.js",
+        "lintfix": "./node_modules/.bin/eslint --fix *.js test/*.js",
+        "test": "./run_tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nodemailer/haraka-plugin-redis.git"
+    },
+    "keywords": [
+        "haraka",
+        "mail",
+        "smtp",
+        "redis"
+    ],
+    "author": "Matt Simerson <matt@tnpi.net>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/nodemailer/haraka-plugin-redis/issues"
+    },
+    "homepage": "https://github.com/nodemailer/haraka-plugin-redis#readme"
 }
