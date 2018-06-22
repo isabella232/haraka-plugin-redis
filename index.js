@@ -64,7 +64,7 @@ exports.init_redis_shared = function(next, server) {
     const plugin = this;
 
     let calledNext = false;
-    function nextOnce() {
+    function nextOnce(e) {
         if (e) plugin.logerror('Redis error: ' + e.message);
         if (calledNext) return;
         calledNext = true;
